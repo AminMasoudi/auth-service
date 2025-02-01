@@ -121,5 +121,5 @@ AUTH_USER_MODEL = "accounting.User"
 
 AUTHENTICATION_BACKENDS = [
     "django.contrib.auth.backends.ModelBackend",
-    "accounting.authentication_backends.CustomBackend",
+    "accounting.authentication_backends.PasswordAuthenticationBackend",
 ]
