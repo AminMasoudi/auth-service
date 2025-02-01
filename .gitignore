@@ -172,3 +172,5 @@ cython_debug/
 
 
 logs
+migrations
+!*/migrations/__init__.py
