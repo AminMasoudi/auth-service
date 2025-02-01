@@ -1,6 +1,7 @@
-from django.contrib.auth import authenticate, login
-from rest_framework.views import APIView
+from django.contrib.auth import authenticate, login, logout as log_out
+from rest_framework.decorators import api_view
 from rest_framework.response import Response
+from rest_framework.views import APIView
 from rest_framework import status
 from .serializers import PasswordLoginSerializer
 
@@ -19,3 +20,9 @@ class LoginView(APIView):
         return Response(
             {"username": user.username, "id": user.id}
         )
+        
+@api_view(["POST"])
+def logout(request):
+    if request.user.is_authenticated:
+        log_out(request)
+    return Response("ok")
