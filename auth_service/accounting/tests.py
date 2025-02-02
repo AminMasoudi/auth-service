@@ -153,7 +153,6 @@ class LogoutViewTests(TestCase):
 
 class OTPTests(TestCase):
     def setUp(self):
-        # Create a test user
         self.user = User.objects.create_user(
             email="test@example.com", password="testpassword123", phone="09123456789"
         )
@@ -195,9 +194,6 @@ class OTPTests(TestCase):
         self.assertEqual(response.status_code, 400)
 
     def test_otp_verification_invalid_code(self):
-        """
-        Test that an invalid OTP code is not verified.
-        """
         OTP.objects.create(username="test@example.com")
         response = self.client.post(
             reverse("otp-verify", kwargs={"username": "test@example.com"}),
