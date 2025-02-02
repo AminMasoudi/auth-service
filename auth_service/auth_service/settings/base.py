@@ -120,6 +120,9 @@ logger_conf_file.close()
 AUTH_USER_MODEL = "accounting.User"
 
 AUTHENTICATION_BACKENDS = [
-    "django.contrib.auth.backends.ModelBackend",
     "accounting.authentication_backends.PasswordAuthenticationBackend",
 ]
+
+OTP_MAIL_TTL = int(os.environ.get("OTP_MAIL_TTL", "5"))
+OTP_PHONE_TTL = int(os.environ.get("OTP_PHONE_TTL", "2"))
+OTP_DIGIT = int(os.environ.get("OTP_DIGIT", 5))
