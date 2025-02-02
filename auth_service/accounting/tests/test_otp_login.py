@@ -1,9 +1,8 @@
-
 from django.test import TestCase, Client
 from django.urls import reverse
 from django.utils import timezone
 import datetime
-from accounting.models import User, OTP
+from ..models import User, OTP
 
 
 class OTPTests(TestCase):

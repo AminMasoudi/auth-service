@@ -1,6 +1,6 @@
 from django.test import TestCase, Client
 from django.urls import reverse
-from accounting.models import User
+from ..models import User
 
 
 class SimpleLoginTests(TestCase):

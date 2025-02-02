@@ -1,5 +1,5 @@
 from django.test import TestCase
-from accounting.models import User
+from ..models import User
 
 
 # Create your tests here.
@@ -47,4 +47,3 @@ class TestUserModel(TestCase):
     def test_validations(self):
         """Maybe later :))) means never"""
         ...
-

@@ -1,7 +1,7 @@
 from django.test import Client, TestCase
 from django.urls import reverse
 
-from accounting.models import User
+from ..models import User
 
 
 class LogoutViewTests(TestCase):
