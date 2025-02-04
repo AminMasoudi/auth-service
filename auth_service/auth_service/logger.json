@@ -38,6 +38,10 @@
       "formatter": "simple",
       "stream": "ext://sys.stderr"
     },
+    "null":{
+      "class": "logging.NullHandler"
+    },
+
     "file_json": {
       "class": "logging.handlers.RotatingFileHandler",
       "level": "INFO",
@@ -51,6 +55,10 @@
     "django": {
       "level": "DEBUG",
       "handlers": ["file_json", "stderr", "stdout"]
+    },
+    "tests": {
+      "level": "DEBUG",
+      "handlers":["file_json"]
     }
   }
 }
