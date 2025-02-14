@@ -9,6 +9,8 @@ DATABASES = {
     }
 }
 
+REDIS_HOST = "localhost"
+REDIS_PORT = 6379
 
 INSTALLED_APPS += [
     "debug_toolbar",
