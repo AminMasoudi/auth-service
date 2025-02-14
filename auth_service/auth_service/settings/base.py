@@ -32,8 +32,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # apps
     "accounting",
+    "rest_framework",
 ]
-
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
